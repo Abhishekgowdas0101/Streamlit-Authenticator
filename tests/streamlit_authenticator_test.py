@@ -1,6 +1,8 @@
 import yaml
 import streamlit as st
 from yaml.loader import SafeLoader
+import sys
+sys.path.append("..")
 import streamlit_authenticator as stauth
 from streamlit_authenticator.utilities.exceptions import (CredentialsError,
                                                           ForgotError,
