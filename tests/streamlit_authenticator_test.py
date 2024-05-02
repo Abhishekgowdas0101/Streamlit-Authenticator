@@ -3,6 +3,22 @@ import streamlit as st
 from yaml.loader import SafeLoader
 import sys
 sys.path.append("..")
+import os
+
+# Get the current working directory
+current_directory = os.getcwd()
+
+# Get the parent directory
+parent_directory = os.path.dirname(current_directory)
+
+# List all files and directories in the parent directory
+contents = os.listdir(parent_directory)
+
+# Print the list of contents to the console
+print("Contents of the parent directory:")
+for item in contents:
+    print(item)
+
 import streamlit_authenticator as stauth
 from streamlit_authenticator.utilities.exceptions import (CredentialsError,
                                                           ForgotError,
